@@ -1,0 +1,10 @@
+<h1>Please add a number </h1>
+
+<%= simple_form_for @number do |f| %>
+  <%= f.input :value, label: 'Please add a whole number' %>
+  <%= f.button :submit %>
+<% end %>
+
+<h2>The last number added was <%= Number.last.value %></h2>
+<h2><%= Number.count %> number(s) have been added </h2>
+<h3>The sum of all added numbers is <%= Number.sum(:value) %> </h3>
